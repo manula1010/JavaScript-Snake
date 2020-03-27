@@ -357,7 +357,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         */
         me.eatFood = function() {
             if (blockPool.length <= growthIncr) {
-                createBlocks(growthIncr*2);
+                createBlocks(growthIncr*99);
             }
             var blocks = blockPool.splice(0, growthIncr);
 
@@ -431,7 +431,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             me.snakeHead.next = me.snakeHead;
             me.snakeHead.prev = me.snakeHead;
             me.snakeTail = me.snakeHead;
-            me.snakeLength = 1;
+            me.snakeLength = 999;
 
             for (var ii = 0; ii < blocks.length; ii++) {
                 blocks[ii].elm.style.left = "-1000px";
